@@ -1,0 +1,37 @@
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(var(--color-secondary), 0.25);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: rgba(var(--color-primary), 1);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-buttons .btn {
+  background-color: rgba(var(--color-secondary), 1);
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  margin-left: 10px;
+  border-radius: 20px;
+  transition: 0.3s;
+  border: none;              
+  outline: none;              
+  display: inline-block; 
+}
+
+.nav-buttons .btn:hover {
+  background-color: rgba(var(--color-accent), 1);
+  color: rgba(var(--color-primary), 1);
+}

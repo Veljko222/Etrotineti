@@ -1,0 +1,191 @@
+/* Use your palette */
+:root {
+  --color-primary: 27, 43, 50;    /* dark greenish */
+  --color-secondary: 0, 191, 174; /* bright aqua */
+  --color-accent: 112, 225, 245;  /* soft blue */
+  --color-soft: 212, 241, 244;    /* pale aqua */
+  --color-bg: 248, 249, 250;      /* light grayish background */
+}
+
+
+
+
+body {
+  margin: 0;
+  background-color: rgba(var(--color-bg), 1);
+  font-family: 'Poppins', sans-serif;
+}
+
+        /* Hero Section */
+.hero {
+  height: 100vh;
+   background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+/* Overlay for better readability */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(var(--color-primary), 0.5); /* semi-transparent overlay */
+  z-index: 1;
+   pointer-events: none;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  z-index: 2; /* above overlay */
+  margin-bottom: 20px;
+}
+
+.hero-btn {
+  z-index: 5;
+  background-color: rgba(var(--color-secondary), 1);
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+  position: relative;
+}
+
+.hero-btn:hover {
+  background-color: rgba(var(--color-accent), 0.9);
+  color: var(--color-primary);
+}
+
+/* Responsive text */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero-btn {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+}
+
+
+        /* About Section */
+.about-section {
+  height: 100vh; 
+  background-color: rgba(var(--color-secondary), 0.9); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.about-content {
+  max-width: 900px;
+  padding: 0 20px;  
+  margin: 0 auto;   
+}
+
+.about-content h2 {
+  font-size: 5rem;
+  margin-bottom: 15%;
+  font-weight: 700; 
+}
+
+.about-content p {
+  font-size: 2rem;       
+  line-height: 1.9;
+  font-weight: 600;
+}
+
+
+        /* Trotineti Section */ 
+.trotinet-section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: rgba(var(--color-soft), 0.2);
+}
+
+.trotinet-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: var(--color-primary);
+}
+
+.trotinet-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.trotinet-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.trotinet-card img {
+  width: 100%;
+   height: 75%;           /* fixed height for all images */
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.trotinet-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.trotinet-card li {
+  margin-bottom: 8px;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .trotinet-cards {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .trotinet-card {
+    width: 80%;
+  }
+}
+
+        /* Locations Section */
+
+        .locations-section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: rgba(var(--color-soft), 0.3);
+}
+
+.locations-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: var(--color-primary);
+}
+
+.map-container {
+  width: 60%;    
+  margin: 0 auto;       
+}

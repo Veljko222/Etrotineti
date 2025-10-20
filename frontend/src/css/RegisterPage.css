@@ -1,0 +1,90 @@
+.register-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: rgba(var(--color-secondary), 0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.register-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: var(--color-primary);
+}
+
+.register-form .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.register-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.register-form input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.password-group .password-wrapper {
+  position: relative;
+}
+
+
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.error {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  display: block;
+}
+
+.register-form input,
+.register-form .btn {
+   width: 100%;           /* zauzima celu širinu kontejnera */
+  height: 50px;          /* ista visina za sve */
+  padding: 0 15px;       /* padding sa leve i desne strane */
+  font-size: 1rem;
+  border-radius: 25px;   /* isto za dugme i input */
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* da padding ne “proširi” širinu */
+}
+
+.register-form .btn {
+  background-color: rgba(var(--color-secondary), 1);
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.register-form .btn:hover {
+  background-color: rgba(var(--color-secondary), 1);
+}
+
+.eye-icon {
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}

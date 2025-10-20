@@ -1,0 +1,60 @@
+.calendar-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 20px;
+  background-color: var(--color-light);
+  color: var(--color-primary);
+}
+
+.calendar-container {
+  flex: 1;
+  min-width: 320px;
+  max-width: 450px;
+  text-align: center;
+}
+
+.calendar-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.date-picker {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid var(--color-primary);
+  font-size: 1rem;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.times-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.time-slot {
+  padding: 10px 20px;
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  background-color: white;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.time-slot:hover {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.time-slot.selected {
+  background-color: #80ed99; /* nova, svetlija plavkasto-zelena nijansa */
+  color: white;
+  border-color: #57cc99;
+}
+
