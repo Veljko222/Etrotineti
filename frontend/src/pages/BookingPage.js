@@ -19,6 +19,8 @@ export default function BookingPage() {
     const handleCityChange = (e) => {
     setSelectedCity(e.target.value);
   };
+
+
 const handleRezervisi = () => {
   if (!selectedCity || !selectedTrotinet || !selectedReservation) {
     alert("Molimo vas, izaberite grad, trotinet i vremenski period.");

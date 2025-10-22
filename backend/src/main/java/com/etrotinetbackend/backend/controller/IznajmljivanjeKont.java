@@ -117,7 +117,7 @@ public List<Integer> getAvailableHours(
     return dostupniSati;
 }
 
-
+//Dostupni trotineti za termin
 @RestController
 @RequestMapping("/api/trotineti")
 @CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
@@ -142,7 +142,7 @@ public class TrotinetDostupnostKontroler {
         return servis.dostupnostPoTrotinetu(grad, localDate, startTime, endTime, userId);
     }
 }
-
+// Kreiranje nove rezervacije
 @PostMapping("/kreiraj")
 public String kreirajRezervaciju(
         @RequestParam String gradNaziv,
@@ -155,7 +155,7 @@ public String kreirajRezervaciju(
     Korisnik user = (Korisnik) session.getAttribute("user");
     if (user == null) return "Niste ulogovani";
 
-    // Pretvaranje string datuma i sati u LocalDate i LocalTime
+    
    
 
     
@@ -179,6 +179,7 @@ public String kreirajRezervaciju(
     service.save(nova);
     return "Rezervacija uspešna!";
 }
+// Izmena postojeće rezervacije
 @PutMapping("/izmeni")
 public String izmeniRezervaciju(
         @RequestParam Long idRezervacije,

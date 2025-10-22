@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css'; // assuming CSS is here
+import './Navbar.css'; 
 import axios from 'axios';
 
 function Navbar({ showAuthButtons = true, onLogout }) {

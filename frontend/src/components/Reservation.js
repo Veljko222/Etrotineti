@@ -27,7 +27,7 @@ export default function ReservationsSection() {
 })
   .then(res => {
     console.log(editReservation);
-    alert("Rezervacija uspešno izmenjena!");
+    alert(res.data);
     setEditReservation(null);
     // Refresh tabele
     window.location.reload();
